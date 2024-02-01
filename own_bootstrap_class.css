@@ -1,0 +1,96 @@
+
+
+.cursor_pointer{
+    cursor: pointer;
+}
+
+
+/* ----------Image tag----------- */
+.object_fit_cover{
+    object-fit: cover;
+}
+.object_fit_contain{
+    object-fit: contain;
+}
+/* --------------Image End------------------- */
+
+/* ----------Postion--------------- */
+.top-5{
+    top: 5%;
+}
+.top-10{
+    top: 10%;
+}
+.top-25{
+    top: 25%;
+}
+.top-75{
+    top: 75%;
+}
+
+.bottom-5{
+    bottom: 5%;
+}
+.bottom-10{
+    bottom: 10%;
+}
+.bottom-25{
+    bottom: 25%;
+}
+.bottom-75{
+    bottom: 75%;
+}
+
+.right-5{
+    right: 5%;
+}
+.right-10{
+    right: 10%;
+}
+.right-25{
+    right: 25%;
+}
+.right-75{
+    right: 75%;
+}
+
+.left-5{
+    left: 5%;
+}
+.left-10{
+    left: 10%;
+}
+.left-25{
+    left: 25%;
+}
+.left-75{
+    left: 75%;
+}
+
+/* ---------------Position End---------- */
+
+/* Extra Small devices (phones) */
+@media (max-width: 575.98px) {
+    /* Your styles for extra small devices go here */
+  }
+  
+  /* Small devices (tablets) */
+  @media (min-width: 576px) and (max-width: 767.98px) {
+    /* Your styles for small devices go here */
+  }
+  
+  /* Medium devices (desktops) */
+  @media (min-width: 768px) and (max-width: 991.98px) {
+    /* Your styles for medium devices go here */
+  }
+  
+  /* Large devices (desktops) */
+  @media (min-width: 992px) and (max-width: 1199.98px) {
+    /* Your styles for large devices go here */
+  }
+  
+  /* Extra Large devices (large desktops) */
+  @media (min-width: 1200px) {
+    /* Your styles for extra large devices go here */
+  }
+  
