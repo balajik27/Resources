@@ -1,0 +1,95 @@
+Background Color
+
+bg-primary
+bg-secondary
+bg-success
+bg-danger
+bg-warning
+bg-info
+bg-light
+bg-dark
+bg-body
+bg-white
+bg-transparent
+
+Gradient
+
+bg-gradient
+
+
+bg-opacity-75
+bg-opacity-50
+bg-opacity-25
+bg-opacity-10
+
+Border
+
+Border - yes
+
+border
+border-top
+border-end
+border-bottom
+border-start
+
+Border - not
+
+border border-0
+bborder order-top-0
+border border-end-0
+border border-bottom-0
+border border-start-0
+
+Border - Opacity 
+
+border-opacity-75
+border-opacity-50
+border-opacity-25
+border-opacity-10
+
+Border - width
+
+border border-1
+border border-2
+border border-3
+border border-4
+border border-5
+
+Border - Radius Only
+
+rounded
+rounded-top
+rounded-end
+rounded-bottom
+rounded-start
+rounded-circle
+rounded-pill
+
+Border - size
+
+rounded-0  to rounded-5
+
+
+Text -color - new
+
+.text-black-50
+.text-white-50
+
+Text - opacity
+
+text-opacity-75
+text-opacity-50
+text-opacity-25
+
+User Interaction
+
+user-select-all
+user-select-auto
+user-select-none
+
+Shadow
+
+shadow-none -none
+shadow-sm - small shadow
+shadow - normal
+shadow-lg -heavy shadow

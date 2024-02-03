@@ -1,73 +1,100 @@
 
 
 .cursor_pointer{
-    cursor: pointer;
+    cursor: pointer !important;
 }
 
 
 /* ----------Image tag----------- */
 .object_fit_cover{
-    object-fit: cover;
+    object-fit: cover !important;
 }
 .object_fit_contain{
-    object-fit: contain;
+    object-fit: contain !important;
 }
 /* --------------Image End------------------- */
 
 /* ----------Postion--------------- */
 .top-5{
-    top: 5%;
+    top: 5% !important;
 }
 .top-10{
-    top: 10%;
+    top: 10% !important;
 }
 .top-25{
-    top: 25%;
+    top: 25% !important;
 }
 .top-75{
-    top: 75%;
+    top: 75% !important;
 }
 
 .bottom-5{
-    bottom: 5%;
+    bottom: 5% !important;
 }
 .bottom-10{
-    bottom: 10%;
+    bottom: 10% !important;
 }
 .bottom-25{
-    bottom: 25%;
+    bottom: 25% !important;
 }
 .bottom-75{
-    bottom: 75%;
+    bottom: 75% !important;
 }
 
 .right-5{
-    right: 5%;
+    right: 5% !important;
 }
 .right-10{
-    right: 10%;
+    right: 10% !important;
 }
 .right-25{
-    right: 25%;
+    right: 25% !important;
 }
 .right-75{
-    right: 75%;
+    right: 75% !important;
 }
 
 .left-5{
-    left: 5%;
+    left: 5% !important;
 }
 .left-10{
-    left: 10%;
+    left: 10% !important;
 }
 .left-25{
-    left: 25%;
+    left: 25% !important;
 }
 .left-75{
-    left: 75%;
+    left: 75% !important;
 }
 
 /* ---------------Position End---------- */
+
+
+.scale_1_05{
+    transform: scale(1.05) !important;
+}
+.scale_1_10{
+    transform: scale(1.10) !important;
+}
+.scale_1_15{
+    transform: scale(1.15) !important;
+}
+.scale_1_20{
+    transform: scale(1.20) !important;
+}
+
+.rotate_5_deg{
+    transform: rotate(5deg) !important;
+}
+.rotate_8_deg{
+    transform: rotate(8deg) !important;
+}
+.rotate_10_deg{
+    transform: rotate(8deg) !important;
+}
+
+
+
 
 /* Extra Small devices (phones) */
 @media (max-width: 575.98px) {
