@@ -4,6 +4,9 @@
     cursor: pointer !important;
 }
 
+.list_style_none{
+    list-style: none;
+}
 
 /* ----------Image tag----------- */
 .object_fit_cover{
