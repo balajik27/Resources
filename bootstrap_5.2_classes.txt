@@ -35,7 +35,7 @@ border-start
 Border - not
 
 border border-0
-bborder order-top-0
+bborder border-top-0
 border border-end-0
 border border-bottom-0
 border border-start-0
