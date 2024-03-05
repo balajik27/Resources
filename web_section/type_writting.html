@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../assets/bootstrap/css/bootstrap.min.css" />
+    <style>
+        /* --------------build_extend --------------- */
+
+
+        #build_extend .build_extend_headtitle_content .build_extend_headtitle {
+            line-height: 70px;
+            color: #2d3958;
+            font-size: 4rem;
+            letter-spacing: -2px;
+        }
+
+        #build_extend .build_extend_line_height {
+            line-height: 1.6rem;
+        }
+
+        .cursor {
+            border-left: 4px solid #4c6fff;
+        }
+
+        .special_font_color {
+            color: #4c6fff;
+        }
+
+        @media only screen and (max-width: 600px) {
+            #build_extend .build_extend_headtitle_content .build_extend_headtitle {
+                line-height: 50px;
+                font-size: 3rem;
+                letter-spacing: -2px;
+            }
+
+            #employee .employee_headtitle_content .employee_headtitle {
+                line-height: 50px;
+                font-size: 3rem;
+            }
+        }
+
+        @media only screen and (max-device-width: 414px) {
+            #build_extend .build_extend_headtitle_content .build_extend_headtitle {
+                line-height: 50px;
+                font-size: 2rem;
+                letter-spacing: -2px;
+            }
+
+            #employee .employee_headtitle_content .employee_headtitle {
+                line-height: 50px;
+                font-size: 2rem;
+            }
+
+        }
+    </style>
+</head>
+
+<body>
+
+    <section id="build_extend" class="py-md-5 py-3">
+        <div class="container py-5">
+            <div class="build_extend_headtitle_content text-center">
+                <p class="m-0 p-0 build_extend_headtitle fw-bolder px-lg-0 px-md-3 px-5"><span class="pe-1">Build or
+                        extend your </span><span class="special_font_color" id="typewriter" data-array=""></span><span
+                        class="cursor ps-1"></span></p>
+                <span class="build_extend_headtitle fw-bolder">development team</span>
+            </div>
+        </div>
+    </section>
+
+    <script type="text/javascript" src="../assets/js/jquery.min.js"></script>
+    <script type="text/javascript" src="../assets/bootstrap/js/bootstrap.bundle.js"></script>
+</body>
+
+</html>
+<script>
+    // ----------------typewritter for build or extend----------------
+
+    var typeWriterElement = document.getElementById('typewriter');
+
+    // The TextArray: 
+    var textArray = ["Website", "Business", "Software"];
+
+    // You can also do this by transfering it through a data-attribute
+    // var textArray = typeWriterElement.getAttribute('data-array');
+
+
+    // function to generate the backspace effect 
+    function delWriter(text, i, cb) {
+        if (i >= 0) {
+            typeWriterElement.innerHTML = text.substring(0, i--);
+            // generate a random Number to emulate backspace hitting.
+            var rndBack = 10 + Math.random() * 100;
+            setTimeout(function () {
+                delWriter(text, i, cb);
+            }, rndBack);
+        } else if (typeof cb == 'function') {
+            setTimeout(cb, 1000);
+        }
+    };
+
+    // function to generate the keyhitting effect
+    function typeWriter(text, i, cb) {
+        if (i < text.length + 1) {
+            typeWriterElement.innerHTML = text.substring(0, i++);
+            // generate a random Number to emulate Typing on the Keyboard.
+            var rndTyping = 250 - Math.random() * 100;
+            setTimeout(function () {
+                typeWriter(text, i++, cb)
+            }, rndTyping);
+        } else if (i === text.length + 1) {
+            setTimeout(function () {
+                delWriter(text, i, cb)
+            }, 1000);
+        }
+    };
+
+    // the main writer function
+    function StartWriter(i) {
+        if (typeof textArray[i] == "undefined") {
+            setTimeout(function () {
+                StartWriter(0)
+            }, 1000);
+        } else if (i < textArray[i].length + 1) {
+            typeWriter(textArray[i], 0, function () {
+                StartWriter(i + 1);
+            });
+        }
+    };
+    // wait one second then start the typewriter
+    setTimeout(function () {
+        StartWriter(0);
+    }, 1000);
+
+
+// --------------------end type writter -----------------
+
+</script>

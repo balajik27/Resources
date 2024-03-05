@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../assets/bootstrap/css/bootstrap.min.css" />
+    <style>
+        .middle_content{
+            height: 800px;
+        }
+    </style>
+    
+</head>
+
+<body>
+
+    <div class="container py-5">
+        <div class="row  justify-content-xl-between justify-content-center">
+            <div class="col-1 d-xl-block d-none ">
+                
+            </div>
+            <div class="col-lg-5 col-10 d-flex flex-row py-4 position-relative">
+               
+                <div class="p-md-5 p-4  d-xl-flex position-absolute  rounded-5 flex-column justify-content-center align-items-center">
+                    <h1 id="counter" data-purecounter-start="0" data-purecounter-end="24"
+                        data-purecounter-duration="2000" class="counter  text-center" style="opacity: 1; ">150</h1>
+
+
+                    <h5 class="text-white font-weight-bold text-center">Startups created</h5>
+                </div>
+            </div>
+            <div class="col-lg-5 py-5 align-items-center">
+            </div>
+        </div>
+    </div>
+
+    <div class="middle_content">
+        scroll down
+    </div>
+    <section class="ser_count">
+        <div class="container">
+          <div class="row px-4">
+            <div class="col-md-3 col-12">
+              <div class="d-flex justify-content-center align-items-center sc_count1 py-3">
+                <h1 id="counter50k" data-purecounter-start="0" data-purecounter-end="50" data-purecounter-duration="2000" class="counter_50k text-center" style="opacity: 1;">150</h1>
+                <h5 class="fw-bold">users</h5>
+              </div>
+            </div>
+            <div class="col-md-3 col-12">
+              <div class="d-flex justify-content-center align-items-center sc_count2 py-3 mt-md-0 mt-4">
+                <h1 id="counter32k" data-purecounter-start="0" data-purecounter-end="32" data-purecounter-duration="2000" class="counter_32k text-center" style="opacity: 1;">150</h1>
+                <h5 class="fw-bold">Downloads</h5>
+              </div>
+            </div>
+            <div class="col-md-3 col-12">
+              <div class="d-flex justify-content-center align-items-center sc_count3 py-3  mt-md-0 mt-4">
+                <h1 id="counter90k" data-purecounter-start="0" data-purecounter-end="90" data-purecounter-duration="2000" class="counter_90k text-center" style="opacity: 1;">150</h1>
+                <h5 class="fw-bold">Social Likes</h5>
+              </div>
+            </div>
+            <div class="col-md-3 col-12">
+              <div class="d-flex justify-content-center align-items-center sc_count4 py-3  mt-md-0 mt-4">
+                <h1 id="counter25k" data-purecounter-start="0" data-purecounter-end="150" data-purecounter-duration="2000" class="counter_25k text-center" style="opacity: 1;">150</h1>
+                <h5 class="fw-bold">Subscribers</h5>
+              </div>
+            </div>
+            
+          </div>
+        </div>
+      </section>
+    <script type="text/javascript" src="../assets/js/jquery.min.js"></script>
+    <script type="text/javascript" src="../assets/bootstrap/js/bootstrap.bundle.js"></script>
+</body>
+
+</html>
+
+<script>
+     // ---------------24+--------------------
+       
+
+     document.addEventListener('DOMContentLoaded', function () {
+    var counterElement = document.querySelector('.counter');
+    var startValue = parseInt(counterElement.getAttribute('data-purecounter-start'));
+    var endValue = parseInt(counterElement.getAttribute('data-purecounter-end'));
+    var duration = parseInt(counterElement.getAttribute('data-purecounter-duration'));
+    var increment = (endValue - startValue) / (duration / 1000);
+
+    // Set up the Intersection Observer
+    var observer = new IntersectionObserver(function (entries) {
+      entries.forEach(function (entry) {
+        if (entry.isIntersecting) {
+          // Show the counter element (remove opacity)
+          counterElement.style.opacity = 1;
+          // Start the animation
+          startAnimation();
+          // Unobserve the target once it becomes visible
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0 });
+
+    // Observe the counter section
+    var counterSection = document.getElementById('counter');
+    observer.observe(counterSection);
+
+    // Function to start the animation
+    function startAnimation() {
+      var currentValue = startValue;
+      var startTime;
+
+      function updateCounter(timestamp) {
+        if (!startTime) startTime = timestamp;
+
+        var progress = timestamp - startTime;
+        currentValue = startValue + (progress / duration) * (endValue - startValue);
+        counterElement.innerText = Math.round(currentValue) + "K";
+
+        if (progress < duration) {
+          requestAnimationFrame(updateCounter);
+        } else {
+          counterElement.innerText = endValue +"K";
+        }
+      }
+
+      requestAnimationFrame(updateCounter);
+    }
+  });
+  
+
+//   ------------------------------------
+
+
+ // -----------------50k+-------------------
+
+ document.addEventListener('DOMContentLoaded', function () {
+    var counterElement = document.querySelector('.counter_50k');
+    var startValue = parseInt(counterElement.getAttribute('data-purecounter-start'));
+    var endValue = parseInt(counterElement.getAttribute('data-purecounter-end'));
+    var duration = parseInt(counterElement.getAttribute('data-purecounter-duration'));
+    var increment = (endValue - startValue) / (duration / 1000);
+
+    // Set up the Intersection Observer
+    var observer = new IntersectionObserver(function (entries) {
+      entries.forEach(function (entry) {
+        if (entry.isIntersecting) {
+          // Show the counter element (remove opacity)
+          counterElement.style.opacity = 1;
+          // Start the animation
+          startAnimation();
+          // Unobserve the target once it becomes visible
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0 });
+
+    // Observe the counter section
+    var counterSection = document.getElementById('counter50k');
+    observer.observe(counterSection);
+
+    // Function to start the animation
+    function startAnimation() {
+      var currentValue = startValue;
+      var startTime;
+
+      function updateCounter(timestamp) {
+        if (!startTime) startTime = timestamp;
+
+        var progress = timestamp - startTime;
+        currentValue = startValue + (progress / duration) * (endValue - startValue);
+        counterElement.innerText = Math.round(currentValue) + "K";
+
+        if (progress < duration) {
+          requestAnimationFrame(updateCounter);
+        } else {
+          counterElement.innerText = endValue +"K";
+        }
+      }
+
+      requestAnimationFrame(updateCounter);
+    }
+  });
+
+
+ // -----------------32k+-------------------
+        
+document.addEventListener('DOMContentLoaded', function () {
+    var counterElement = document.querySelector('.counter_32k');
+    var startValue = parseInt(counterElement.getAttribute('data-purecounter-start'));
+    var endValue = parseInt(counterElement.getAttribute('data-purecounter-end'));
+    var duration = parseInt(counterElement.getAttribute('data-purecounter-duration'));
+    var increment = (endValue - startValue) / (duration / 1000);
+
+    // Set up the Intersection Observer
+    var observer = new IntersectionObserver(function (entries) {
+      entries.forEach(function (entry) {
+        if (entry.isIntersecting) {
+          // Show the counter element (remove opacity)
+          counterElement.style.opacity = 1;
+          // Start the animation
+          startAnimation();
+          // Unobserve the target once it becomes visible
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0 });
+
+    // Observe the counter section
+    var counterSection = document.getElementById('counter32k');
+    observer.observe(counterSection);
+
+    // Function to start the animation
+    function startAnimation() {
+      var currentValue = startValue;
+      var startTime;
+
+      function updateCounter(timestamp) {
+        if (!startTime) startTime = timestamp;
+
+        var progress = timestamp - startTime;
+        currentValue = startValue + (progress / duration) * (endValue - startValue);
+        counterElement.innerText = Math.round(currentValue) + "K";
+
+        if (progress < duration) {
+          requestAnimationFrame(updateCounter);
+        } else {
+          counterElement.innerText = endValue +"K";
+        }
+      }
+
+      requestAnimationFrame(updateCounter);
+    }
+  });
+
+ // -----------------90k+-------------------
+
+    document.addEventListener('DOMContentLoaded', function () {
+    var counterElement = document.querySelector('.counter_90k');
+    var startValue = parseInt(counterElement.getAttribute('data-purecounter-start'));
+    var endValue = parseInt(counterElement.getAttribute('data-purecounter-end'));
+    var duration = parseInt(counterElement.getAttribute('data-purecounter-duration'));
+    var increment = (endValue - startValue) / (duration / 1000);
+
+    // Set up the Intersection Observer
+    var observer = new IntersectionObserver(function (entries) {
+      entries.forEach(function (entry) {
+        if (entry.isIntersecting) {
+          // Show the counter element (remove opacity)
+          counterElement.style.opacity = 1;
+          // Start the animation
+          startAnimation();
+          // Unobserve the target once it becomes visible
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0 });
+
+    // Observe the counter section
+    var counterSection = document.getElementById('counter90k');
+    observer.observe(counterSection);
+
+    // Function to start the animation
+    function startAnimation() {
+      var currentValue = startValue;
+      var startTime;
+
+      function updateCounter(timestamp) {
+        if (!startTime) startTime = timestamp;
+
+        var progress = timestamp - startTime;
+        currentValue = startValue + (progress / duration) * (endValue - startValue);
+        counterElement.innerText = Math.round(currentValue) + "K";
+
+        if (progress < duration) {
+          requestAnimationFrame(updateCounter);
+        } else {
+          counterElement.innerText = endValue +"K";
+        }
+      }
+
+      requestAnimationFrame(updateCounter);
+    }
+  });
+
+
+ // -----------------25k+-------------------
+
+ document.addEventListener('DOMContentLoaded', function () {
+    var counterElement = document.querySelector('.counter_25k');
+    var startValue = parseInt(counterElement.getAttribute('data-purecounter-start'));
+    var endValue = parseInt(counterElement.getAttribute('data-purecounter-end'));
+    var duration = parseInt(counterElement.getAttribute('data-purecounter-duration'));
+    var increment = (endValue - startValue) / (duration / 1000);
+
+    // Set up the Intersection Observer
+    var observer = new IntersectionObserver(function (entries) {
+      entries.forEach(function (entry) {
+        if (entry.isIntersecting) {
+          // Show the counter element (remove opacity)
+          counterElement.style.opacity = 1;
+          // Start the animation
+          startAnimation();
+          // Unobserve the target once it becomes visible
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0 });
+
+    // Observe the counter section
+    var counterSection = document.getElementById('counter25k');
+    observer.observe(counterSection);
+
+    // Function to start the animation
+    function startAnimation() {
+      var currentValue = startValue;
+      var startTime;
+
+      function updateCounter(timestamp) {
+        if (!startTime) startTime = timestamp;
+
+        var progress = timestamp - startTime;
+        currentValue = startValue + (progress / duration) * (endValue - startValue);
+        counterElement.innerText = Math.round(currentValue) + "K";
+
+        if (progress < duration) {
+          requestAnimationFrame(updateCounter);
+        } else {
+          counterElement.innerText = endValue +"K";
+        }
+      }
+
+      requestAnimationFrame(updateCounter);
+    }
+  });
+
+
+</script>
